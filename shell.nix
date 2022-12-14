@@ -24,5 +24,6 @@ mkShell {
   name = "micropython-esp32-env";
   buildInputs = [
     flash-micropython-esp32
+    python3Packages.pyserial
   ];
 }
