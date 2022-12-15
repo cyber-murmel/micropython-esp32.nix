@@ -10,11 +10,12 @@
 
 with pkgs;
 with import
-    (builtins.fetchGit {
-      url = "https://github.com/cyber-murmel/esp-idf.nix";
-      rev = "dc15bc151fde966ac7df0e756bea5097c59cd306";
-    })
-    { };
+  (builtins.fetchGit {
+    url = "https://github.com/cyber-murmel/esp-idf.nix";
+    ref = "refs/heads/main";
+    rev = "3f17ac3e1d59be731b9d9d49e70ce261cd326b1d";
+  })
+{ };
 let
   # we only need this submodule for ESP32
   berkeley-db-1_xx = fetchFromGitHub {
